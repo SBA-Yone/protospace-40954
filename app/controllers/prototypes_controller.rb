@@ -59,7 +59,6 @@ class PrototypesController < ApplicationController
   end
 
   def authorize_user!
-    redirect_to root_path,  unless @prototype.user_id == current_user.id
+    redirect_to root_path unless @prototype.user_id == current_user.id
   end
-
 end
